@@ -1,6 +1,8 @@
 @component('mail::message')
-# {{$tarefa}}
+# Título: {{$tarefa->titulo}}
 
+Tarefa a ser cumprida: {{ $tarefa->tarefa}}
+<br>
 Data limite de conclusão: {{ $data_limite}}
 
 @component('mail::button', ['url' => $url])
