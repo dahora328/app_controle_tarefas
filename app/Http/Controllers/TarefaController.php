@@ -47,7 +47,7 @@ class TarefaController extends Controller
      */
     public function store(Request $request)
     {
-        $dados = $request->all('tarefa', 'data_limite');
+        $dados = $request->all('tarefa', 'data_limite', 'titulo');
         $dados['user_id'] = auth()->user()->id;
 
         $tarefa = Tarefa::create($dados);

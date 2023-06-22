@@ -11,6 +11,10 @@
                     <form method="post" action="{{ route('tarefa.store')}}">
                         @csrf
                         <div class="mb-3">
+                            <label class="form-label">Título da Tarefa</label>
+                            <input type="text" class="form-control" name="titulo">
+                          </div>
+                        <div class="mb-3">
                           <label class="form-label">Tarefa</label>
                           <input type="text" class="form-control" name="tarefa">
                         </div>
