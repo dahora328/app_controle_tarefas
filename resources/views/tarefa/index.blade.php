@@ -15,6 +15,7 @@
                                     <th scope="col">Título da Tarefa</th>
                                     <th scope="col">Descrição da Tarefa</th>
                                     <th scope="col">Data Limite Conclusão</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -24,6 +25,7 @@
                                         <td>{{ $tarefa['titulo'] }}</td>
                                         <td>{{ $tarefa['tarefa'] }}</td>
                                         <td>{{ date('d/m/Y', strtotime($tarefa['data_limite'])) }}</td>
+                                        <td><a href=" {{ route('tarefa.edit',  $tarefa['id'])}} ">Editar</a></td>
                                     </tr>
                                 @endforeach
                             </tbody>

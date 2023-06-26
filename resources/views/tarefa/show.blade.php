@@ -12,7 +12,7 @@
                                 <label class="form-label">Data limite conclusão</label>
                                 <input type="date" class="form-control" value="{{ $tarefa->data_limite}}">
                         </fieldset>
-                        <a href="{{route('tarefa.create')}}"  class="btn btn-primary">Voltar</a>
+                        <a href="{{route('tarefa.index')}}"  class="btn btn-primary">Voltar</a>
                     </div>
             </div>
         </div>
