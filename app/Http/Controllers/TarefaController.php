@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\TarefasExport;
 use App\Models\Tarefa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Mail\NovaTarefaMail;
 use Illuminate\Support\Facades\Mail;
+use Maatwebsite\Excel\Facades\Excel;
 
 class TarefaController extends Controller
 {
@@ -115,5 +117,9 @@ class TarefaController extends Controller
         }
         return view('acesso-negado', ['user' => auth()->user()->id]);
         dd($tarefa);
+    }
+
+    public function Exportacao(){
+        return Excel::download( new TarefasExport, 'listas_tarefas.xlsx');
     }
 }

@@ -22,6 +22,9 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => true]);
 
+Route::get('/tarefa/exportacao','App\Http\Controllers\TarefaController@exportacao')
+->name('tarefa.exportacao');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])
 ->name('home')
 ->middleware('verified');
